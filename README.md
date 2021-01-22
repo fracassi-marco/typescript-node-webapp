@@ -1,8 +1,6 @@
 # TypeScript Node WebApp
 
-typescript-node-webapp is a simple project, It's goals are:
-- learn how to setup a project
-It's goal is to explain how to:
+typescript-node-webapp is a simple project. It's goals are to explain how to:
 - setup a Node project with TypeScript (https://khalilstemmler.com/blogs/typescript/node-starter-project/)
 - use Fastify to serve a web page (https://www.fastify.io/docs/latest/TypeScript/)
 - write an integration test (https://medium.com/@RupaniChirag/writing-unit-tests-in-typescript-d4719b8a0a40)
@@ -13,21 +11,15 @@ It's goal is to explain how to:
 npm run start:dev
 ```
 
-Open browser:
+This url should show `pong` text: `http://localhost:8080/ping`
 
-```
-http://localhost:8080/ping
-```
-
-This url should show `pong` text
-
-## Running the tests
+## Run the tests
 
 ```
 npm run test
 ```
 
-## Running code coverage
+## Run code coverage
 
 ```
 npm run coverage
