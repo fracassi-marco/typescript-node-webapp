@@ -1,11 +1,21 @@
-import fastify from 'fastify';
+import fastify, { FastifyInstance, FastifyLoggerInstance, FastifyRequest, RequestBodyDefault } from 'fastify';
+import { Server, IncomingMessage, ServerResponse } from 'http';
 import { PingPongUseCase } from './PingPongUseCase';
+import { SayUseCase } from './SayUseCase';
+
+interface SayBody {
+  message: string;
+}
 
 export class App {  
 
   build() {
-    var server = fastify();
-    server.get('/ping', async (request, reply) => { return new PingPongUseCase().handle(); });
+    var server: FastifyInstance<Server, IncomingMessage, ServerResponse, FastifyLoggerInstance> = fastify();    
+    server.get('/ping', async (request, reply) => { return new PingPongUseCase().handle(); })
+    server.post<{Body: SayBody}>('/say', async (request, reply) => {                               
+      return new SayUseCase(request.body.message).handle(); 
+    })
+
     return server;
   }
 
