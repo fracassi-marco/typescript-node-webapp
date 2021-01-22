@@ -1,11 +1,8 @@
-import fastify, { FastifyInstance, FastifyLoggerInstance, FastifyRequest, RequestBodyDefault } from 'fastify';
+import fastify, { FastifyInstance, FastifyLoggerInstance } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
 import { PingPongUseCase } from './PingPongUseCase';
+import { SayBody } from './SayBody';
 import { SayUseCase } from './SayUseCase';
-
-interface SayBody {
-  message: string;
-}
 
 export class App {  
 

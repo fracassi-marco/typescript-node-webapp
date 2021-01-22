@@ -26,6 +26,6 @@ describe('app', () => {
             headers: { 'Content-type': 'application/json' }
         });
         
-        expect(response.body).equal("hello")
+        expect(response.body).equal('{"text":"hello"}')
     })
 })

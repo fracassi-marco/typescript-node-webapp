@@ -1,13 +1,14 @@
+import { Message } from "./Message"
 
 export class SayUseCase {
 
-    message: string;
+    private messageText: string
 
     constructor(message: string) {
-        this.message = message;
+        this.messageText = message
     }
 
     handle() {
-        return this.message;
+        return new Message(this.messageText)
     }
 }
