@@ -27,6 +27,14 @@ This url should show `pong` text
 npm run test
 ```
 
+## Running code coverage
+
+```
+npm run coverage
+```
+
+Coverage report: `./coverage/lcov-report/index.html`
+
 ## Authors
 
 * **[Marco Fracassi](https://github.com/fracassi-marco)**
