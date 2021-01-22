@@ -1,6 +1,5 @@
-import { MessageChannel } from 'worker_threads';
-import { SayUseCase } from '../src/SayUseCase';
-var chai = require('chai');
+import { SayUseCase } from '../src/SayUseCase'
+var chai = require('chai')
 const expect = chai.expect
 
 describe('say use case', () => {
